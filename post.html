@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome-5.9.0.all.min.css">
+
+    <title>MyBlog</title>
+    <style>
+      .blog-footer {
+        padding: 2.5rem 0;
+        color: #999;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: .05rem solid #e5e5e5;
+      }
+      .blog-footer p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-white text-dark bg-white mb-3 border-bottom shadow-sm">
+        <div class="container">
+          <a class="navbar-brand nav-brand text-dark" href="#">MyBlog</a>
+          <button class="navbar-toggler btn btn-outline-info" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-left"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav ml-auto">
+              <!-- First nav bar with Second Nav bar -->
+                <li class="nav-item d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink text-dark" href="#">Home</a>
+                </li>
+                <li class="nav-item d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink text-dark" href="#">Link</a>
+                </li> <!-- category nav bar -->
+
+                  <li class="nav-item dropdown d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                    <a class="nav-link dropdown-toggle text-dark f-navlink" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li> <!-- / category nav bar -->
+
+                <li class="nav-item d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink text-dark" href="#">linux</a>
+                </li>
+                <li class="nav-item d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink text-dark" href="#">Software</a>
+                </li>
+                <li class="nav-item d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink text-dark" href="#">Programming</a>
+                </li>
+                <span class=""><hr></span>
+
+                <!-- Search nav bar -->
+                  <form class="mb-1 d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">Search</button>
+                      </div>
+                    </div>
+                  </form> <!-- / Search nav bar -->
+
+                <!-- popular post nar bar -->
+                <li class="nav-item dropdown d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink dropdown-toggle text-dark" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Popular Post</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown09">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> <!-- / popular post nav bar-->
+
+                <!-- recent post nav bar -->
+                <li class="nav-item dropdown d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+                  <a class="nav-link f-navlink dropdown-toggle text-dark" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recent Post</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown09">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> <!-- / recent post nav bar -->
+
+                <!-- <span><hr></span> -->
+
+              <!-- / First nav bar with Second Nav bar -->
+              <li class="nav-item d-none d-lg-block d-xl-none d-xl-block">
+                <a class="nav-link f-navlink text-dark" href="#">About</a>
+              </li>
+              <li class="nav-item d-none d-lg-block d-xl-none d-xl-block">
+                <a class="nav-link f-navlink text-dark" href="#">Contact</a>
+              </li>
+              <li class="nav-item d-none d-lg-block d-xl-none d-xl-block">
+                <a class="nav-link f-navlink text-dark" href="#">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> <!-- / Nav Bar -->
+
+    <!-- Menu Bar -->
+      <div id="menubar" class="container bg-white rounded d-none d-lg-block d-xl-none d-xl-block">
+        <div class="d-flex mt-3 flex-column flex-md-row align-items-center p-3 px-md-4 mb-4">
+          <nav class="my-2 my-md-0 mr-md-2">
+            <a class="p-2 navlink text-dark" href="#"><span class="pb-3 underline">Software</span></a>
+            <a class="p-2 navlink text-dark" href="#"><span class="ml-2 pb-3 underline">Linux</span></a>
+            <a class="p-2 navlink text-dark" href="#"><span class="ml-2 pb-3 underline">Programing</span></a>
+            <a class="p-2 navlink text-dark" href="#"><span class="ml-2 pb-3 underline">Design</span></a>
+            <a class="p-2 navlink text-dark" href="#"><span class="ml-2 pb-3 underline">Culture</span></a>
+          </nav>
+        </div>
+      </div> <!-- / Menu Bar -->
+
+    <!-- Row -->
+      <div class="container mt-3">
+
+        <!-- Row -->
+        <div class="row mb-1">
+
+          <!-- Col-md-8 -->
+          <div class="col-lg-8 bg-white border-info rounded shadow-sm">
+
+            <div class="p-3">
+              <h1>How To Install Gnome Tweak Tool In Ubuntu 19.04</h1>
+              <small class="small text-muted"> <i class="  far fa-calendar mr-1"></i> Date - 29/3/2019 | <i class="fas fa-folder-open ml-1 mr-1"></i> Category - Ubuntu</small>
+
+              <!-- Tags -->
+                <div class="pt-2"> 
+                  <div>
+                    <span><i class="fas fa-tags"></i></span>
+                    <a href="#" class="badge badge-primary">jquery</a>
+                    <a href="#" class="badge badge-primary">laravel</a>
+                    <a href="#" class="badge badge-primary">php</a>
+                    <a href="#" class="badge badge-primary">javascript</a>
+                    <a href="#" class="badge badge-primary">html</a>
+                    <a href="#" class="badge badge-primary">ubuntu</a>
+                    <a href="#" class="badge badge-primary">manjaro</a>
+                    <a href="#" class="badge badge-primary">google chrome</a>
+                    <a href="#" class="badge badge-primary">linux</a>
+                    <a href="#" class="badge badge-primary">jquery</a>
+                    <a href="#" class="badge badge-primary">laravel</a>
+                    <a href="#" class="badge badge-primary">php</a>
+                    <a href="#" class="badge badge-primary">javascript</a>
+                    <a href="#" class="badge badge-primary">html</a>
+                    <a href="#" class="badge badge-primary">ubuntu</a>
+                    <a href="#" class="badge badge-primary">manjaro</a>
+                    <a href="#" class="badge badge-primary">google chrome</a>
+                    <a href="#" class="badge badge-primary">linux</a>
+                    <a href="#" class="badge badge-primary">jquery</a>
+                    <a href="#" class="badge badge-primary">laravel</a>
+                    <a href="#" class="badge badge-primary">php</a>
+                    <a href="#" class="badge badge-primary">javascript</a>
+                    <a href="#" class="badge badge-primary">html</a>
+                    <a href="#" class="badge badge-primary">ubuntu</a>
+                    <a href="#" class="badge badge-primary">manjaro</a>
+                    <a href="#" class="badge badge-primary">google chrome</a>
+                    <a href="#" class="badge badge-primary">linux</a>
+                  </div>
+                </div>
+              <!-- / Tags -->
+
+              <hr>
+
+              <p>In this article we will be installing Google Chrome browser on Ubuntu 19.04 Disco Dingo Linux.</p>
+
+              <!-- System Information -->
+              <div>
+                <h2 class="d-flex callout-info p-2">
+                  <span>System Information</span>
+                  <a class="d-flex align-items-center text-muted" href="#">
+                    <span data-feather="plus-circle"></span>
+                  </a>
+                </h2>
+                <ul class="nav flex-column mb-2">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" class="text-muted" >
+                      <span data-feather="file-text"></span>
+                      Software - Google Chrome
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" class="text-muted">
+                      <span data-feather="file-text"></span>
+                      Distro - Ubuntu 19.04
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" class="text-muted">
+                      <span data-feather="file-text"></span>
+                      Category - Ubuntu Software
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" class="text-muted">
+                      <span data-feather="file-text"></span>
+                      Distro - Ubuntu 19.04
+                    </a>
+                  </li>
+                </ul>
+              </div> <!-- / System Information -->
+
+              <div class="mb-5">
+                <h4>step by step instructions</h4>
+                <p>Step 1 - </p>
+                <h5>Install all prerequisites.</h5>
+                <img src="https://dummyimage.com/600x400/000/fff&text=600x400" class="img-fluid" alt="Responsive image">
+                <p>Step 1 - </p>
+                <h5>Install all prerequisites.</h5>
+                <img src="https://dummyimage.com/600x400/000/fff&text=600x400" class="img-fluid" alt="Responsive image">
+                <p>Step 1 - </p>
+                <h5>Install all prerequisites.</h5>
+                <img src="https://dummyimage.com/600x400/000/fff&text=600x400" class="img-fluid" alt="Responsive image">
+              </div>
+            </div>
+
+          </div> <!-- / Col-md-8 -->
+
+          <!-- Col-md-4 -->
+          <div class="col-lg-4 d-none d-lg-block d-xl-none d-xl-block">
+
+            <!-- Search -->
+            <form class=" bg-white rounded p-2 mb-3 shadow-sm">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-secondary">Search</button>
+                </div>
+              </div>
+            </form> <!-- Search -->
+
+            <!-- Popular Post -->
+              <div class="my-3 p-3 bg-white rounded shadow-sm">
+                <h6 class="pb-2 mb-0">Popular Post</h6>
+                <div class="media text-muted">
+                  <p class="media-body pb-2 bd-callout bd-callout-info mb-0 small lh-125 ">
+                    <a href="#"><strong class="d-block text-muted text-dark">How to install Ubuntu 19.04</strong></a>
+                    <span class="d-block">1 day ago</span>
+                  </p>
+                </div>
+                <!-- <div class="media text-muted">
+                  <div class="media-body pb-2 bd-callout bd-callout-danger mb-0 small lh-125 ">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <strong class="text-dark">Full Name</strong>
+                      <a href="#">Follow</a>
+                    </div>
+                    <span class="d-block">@username</span>
+                  </div>
+                </div> -->
+                <div class="media text-muted mt-3">
+                  <p class="media-body p-2 mb-0 callout-info small lh-125 ">
+                    <a href="#"><strong class="d-block text-muted text-dark">How to install Ubuntu 19.04 How to install Ubuntu 19.04 How to install Ubuntu 19.04</strong></a>
+                    <span class="d-block">1 day ago</span>
+                  </p>
+                </div>
+                <div class="media text-muted mt-3">
+                  <p class="media-body p-2 mb-0 small lh-125 callout-info">
+                    <a href="#"><strong class="d-block text-muted text-dark">How to install Ubuntu 19.04</strong>
+                    <span class="d-block">1 day ago</span>
+                  </p>
+                </div>
+                <small class="d-block text-right mt-3">
+                  <a href="#">All updates</a>
+                </small>
+              </div> <!-- Popular Post -->
+
+            <!-- Recent Post -->
+            <div class="my-3 p-3 bg-white rounded shadow-sm">
+              <h6 class=" pb-2 mb-0">Recent Post</h6>
+              <div class="media text-muted">
+                <div class="media-body pb-2 bd-callout bd-callout-danger mb-0 small lh-125 ">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-dark">Full Name</strong>
+                    <a href="#">Follow</a>
+                  </div>
+                  <span class="d-block">@username</span>
+                </div>
+              </div>
+              <div class="media text-muted">
+                <div class="media-body pb-2 bd-callout bd-callout-danger mb-0 small lh-125 ">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-dark">Full Name</strong>
+                    <a href="#">Follow</a>
+                  </div>
+                  <span class="d-block">@username</span>
+                </div>
+              </div>
+              <div class="media text-muted">
+                <div class="media-body pb-2 bd-callout bd-callout-danger mb-0 small lh-125 ">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-dark">Full Name</strong>
+                    <a href="#">Follow</a>
+                  </div>
+                  <span class="d-block">@username</span>
+                </div>
+              </div>
+              <small class="d-block text-right mt-3">
+                <a href="#">All suggestions</a>
+              </small>
+            </div> <!-- Recent Post -->
+
+          </div> <!-- / Col-md-4 -->
+
+        </div> <!-- / Row -->
+
+      <!-- Pagination -->
+        <div class="row mt-4">
+          <div class="col-lg-8">
+            <nav class="blog-pagination">
+              <a class="btn btn-outline-info btn-sm shadow-sm" href="#">Older</a>
+              <a class="btn btn-outline-info btn-sm shadow-sm float-right" href="#">Newer</a>
+            </nav>
+          </div>
+        </div> <!-- / Pagination -->
+      
+        <!-- Row divider -->
+        <div class="row">
+          <div class="col-lg-8 p-0 m-0">
+            <hr>
+          </div>
+        </div>  <!-- / Row divider -->
+
+        <!-- Related Post -->
+        <div class="row">
+          <div class="col-lg-8 p-0 m-0">
+            
+            <div class="p-3 bg-white rounded shadow-sm">
+              <h6 class=" pb-2 mb-0">Related Post</h6>
+              <div class="media text-muted">
+                <div class="media-body pb-2 bd-callout bd-callout-warning mb-0 small lh-125 ">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-dark text-muted">Full Name</strong>
+                  </div>
+                  <span class="d-block">15 min ago</span>
+                </div>
+              </div>
+              <div class="media text-muted">
+                <div class="media-body pb-2 bd-callout bd-callout-warning mb-0 small lh-125 ">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-dark text-muted">Full Name</strong>
+                  </div>
+                  <span class="d-block">2 day ago</span>
+                </div>
+              </div>
+              <div class="media text-muted">
+                <div class="media-body pb-2 bd-callout bd-callout-warning mb-0 small lh-125 ">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-dark text-muted">
+                      Lorem ipsum dolor sit amet
+                    </strong>
+                  </div>
+                  <span class="d-block">1 day ago</span>
+                </div>
+              </div>
+              <small class="d-block text-right mt-3">
+                <a href="#">All recent post</a>
+              </small>
+            </div>
+          
+          </div>
+        </div> <!-- Related Post -->
+
+        <!-- Row divider -->
+        <div class="row">
+          <div class="col-lg-8 p-0 m-0">
+            <hr>
+          </div>
+        </div>  <!-- / Row divider -->
+
+        <!-- Comment row -->
+        <div class="row mb-4">
+          <div class="col-lg-8 bg-white border-info rounded shadow-sm">
+
+            <!-- Comment form -->
+
+            <div class="p-3"> <!-- Padding comment && reply -->
+              <form action="" method="post"> <!-- Comment form -->
+                <h5 class="">Add a Review</h5>
+                <hr>
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="text" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">Leave a reply</label>
+                  <textarea name="comm" id="comm" cols="" rows="3" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-outline-primary btn-sm" type="submit" id="submit" name="submit">Submit</button>
+                </div>
+              </form> <!-- / Comment form -->
+
+              <h6>Comments - </h6>
+
+              <hr>
+
+              <!-- Reply -->
+
+              <div> <!-- Demo -->
+                <!-- Comment 1 -->
+                <div class="card bg-light rounded shadow-sm mb-4">
+                  <!-- Comment body 1 -->
+                  <div class="card-body">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=50x50" class="rounded float-left mr-3" alt="..." width="50" height="50">
+                    <a href="#"><h6 class="card-title text-muted">John Doe</h6></a>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="">
+                        <button type="button" class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Like</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Reply</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+
+                    <hr>
+
+                    <!-- Comment reply body -->
+
+                    <div class="card-body p-0 ml-4">
+                      <img src="https://dummyimage.com/600x400/000/fff&text=50x50" class="rounded float-left mr-3" alt="..." width="50" height="50">
+                      <a href="#"><h6 class="card-title text-muted">John Doe</h6></a>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="">
+                          <button type="button" class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Like</button>
+                          <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Reply</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+
+                    </div> <!-- / Comment reply body -->
+
+                  </div> <!-- / Comment body 1 -->
+
+                </div> <!-- Comment 1 -->
+
+                <!-- Comment 2 -->
+                <div class="card border-secondary bg-light rounded mb-4 shadow-sm">
+
+                  <!-- Coment body 2 -->
+                  <div class="card-body">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=50x50" class="rounded float-left mr-3" alt="..." width="50" height="50">
+                    <a href="#"><h6 class="card-title text-muted">John Doe</h6></a>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="">
+                        <button type="button" class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Like</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Reply</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+
+                    <hr>
+
+                    <!-- Comment 2 reply body -->
+                      <div class="card-body p-0 ml-4">
+                        <img src="https://dummyimage.com/600x400/000/fff&text=50x50" class="rounded float-left mr-3" alt="..." width="50" height="50">
+                        <a href="#"><h6 class="card-title text-muted">John Doe</h6></a>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <button type="button" class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Like</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Reply</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    <!-- Comment 2 reply body -->
+
+                  </div> <!-- Comment body 2 -->
+
+                </div> <!-- Comment 2 -->
+
+                <!-- Comment 3 -->
+                <div class="card border-secondary rounded mb-4 shadow-sm">
+
+                  <!-- Coment body 3 -->
+                  <div class="card-body">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=50x50" class="rounded float-left mr-3" alt="..." width="50" height="50">
+                    <a href="#"><h6 class="card-title text-muted">John Doe</h6></a>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="">
+                        <button type="button" class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Like</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Reply</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+
+                    <hr>
+
+                    <!-- Comment 3 reply body -->
+                      <div class="card-body p-0 ml-4">
+                        <img src="https://dummyimage.com/600x400/000/fff&text=50x50" class="rounded float-left mr-3" alt="..." width="50" height="50">
+                        <a href="#"><h6 class="card-title text-muted">John Doe</h6></a>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <button type="button" class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Like</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Reply</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    <!-- Comment 3 reply body -->
+
+                  </div> <!-- Comment body 3 -->
+
+                </div> <!-- Comment 3 -->
+
+              </div> <!-- / Demo -->
+
+            </div> <!-- Padding comment && reply -->
+
+          </div> <!-- / Reply -->
+
+        </div> <!-- / Comment row -->
+
+
+      </div> <!-- / Container -->
+
+      <!-- Back to top button -->
+        <button onclick="topFunction()" class="btn btn-outline-info" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+      <!-- / Back to top button -->
+
+      <!-- Footer -->
+      <footer class="blog-footer">
+        <div>
+          <p class="text-dark font-weight-bold">&copy; 2019 MyBlog</p>
+        </div>
+        <div class="container d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none mt-1">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="text-dark f-navlink">About</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark f-navlink">Contact</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark f-navlink">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </footer> <!-- / Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.1.14.7.min.js"></script>
+    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
